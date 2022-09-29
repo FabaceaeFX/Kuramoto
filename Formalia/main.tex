@@ -1,0 +1,33 @@
+\input{Formalia/header} % Nur für Paketeinbindungen u.ä.
+%Header
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LE,RO]{\thepage}
+%\fancyhead[LE]{\includegraphics[width=0.5cm]{Formalia/Schuh1.png}}
+\fancyhead[LE,LO]{\leftmark}
+
+\fancypagestyle{plain}{% % <-- this is new
+  \fancyhf{} 
+  \fancyfoot[LE,RO]{\thepage} % same placement as with page style "fancy"
+  \renewcommand{\headrulewidth}{0pt}}
+
+\begin{document}
+
+\input{Formalia/Titelseite} %% Muss nicht angepasst werden
+
+\input{Contents/Einfuerung}
+\newpage
+\input{Contents/Theorie}
+\newpage
+\input{Contents/Auswertung}
+\newpage
+\input{Contents/Zusammenfassung}
+\input{Contents/Zusammenfassungdeu.tex}
+\newpage
+\input{Formalia/Acknowledgments.tex}
+\newpage
+\input{Formalia/Literatur} % Hier die vollen Literaturverweise ablegen
+\newpage
+\input{Contents/Appendices}
+
+\end{document}
